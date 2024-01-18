@@ -1,3 +1,19 @@
+import MECA from './assets/MECA-banner.png'
+import CORSERA from './assets/Coursera_logo.png'
+import CODEACADEMY from './assets/Codeacademy-banner.png'
+import CERTIPORT from './assets/certiport-seeklogo.png'
+import GENERATIONTHAI from './assets/Generation_Thailand_logo.webp'
+
+const certificateData = [
+  { src: GENERATIONTHAI, alt: 'Generation thailand' },
+  { src: CORSERA, alt: 'Coursera Logo' },
+  { src: CODEACADEMY, alt: 'Codecademy Banner' },
+  { src: MECA, alt: 'MECA Banner' },
+  { src: CERTIPORT, alt: 'Certipost Seeklogo' },
+ 
+];
+
+
 function App() {
   return (
     <>
@@ -27,7 +43,44 @@ function App() {
             />
         </div>
     </header>
+    <section className="px-8 py-28">
+      <div className="container mx-auto text-center">
+        <h6 className="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-blue-gray-900 mb-8">
+          My License and Certificate
+        </h6>
+      </div>
+      <div className='flex flex-wrap items-center justify-center gap-6'>
+          {certificateData.map((image, index) => (
+            <img
+              key={index}
+              alt={image.alt}
+              loading="lazy"
+              width="768"
+              height="768"
+              decoding="async"
+              data-nimg="1"
+              className="w-40"
+              src={image.src}
+            />
+          ))}
+        </div>
+      </section>
 
+      <section className="p-10 pt-0 pb-0 py-28">
+          <div className="container mx-auto text-center">
+              <div class="flex flex-wrap items-center justify-center gap-6">
+                  <div>
+                      <img class="h-auto w-40 rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt=""/>
+                  </div>
+                  <div>
+                      <img class="h-auto w-40 rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt=""/>
+                  </div>
+                  <div>
+                      <img class="h-auto w-40 rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt=""/>
+                  </div>
+              </div>
+          </div>
+      </section>
     </>
   )
 }

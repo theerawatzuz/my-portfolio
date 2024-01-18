@@ -1,13 +1,15 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import linkedLogo from './assets/linkedin-logo.png'
+import githubLogo from './assets/github.png'
 
 const navigation = [
-  { img:'https://cdn-icons-png.flaticon.com/512/3536/3536569.png', name: 'Linked', href: '#', current: false },
-  { img:'https://cdn-icons-png.flaticon.com/512/3291/3291695.png' , name: 'Github', href: '#', current: false },
+  { img:linkedLogo, name: 'Linked', href: 'https://www.linkedin.com/in/theerawat-silimechok-41648b287/', current: false },
+  { img:githubLogo , name: 'Github', href: 'https://github.com/theerawatzuz', current: false },
 ]
 
-const contact = [
+const utility = [
   { name: 'Darkmode', href: '#', current: true }, 
 ]
 
@@ -47,14 +49,18 @@ export default function Nav() {
                             img={item.src}
                             key={item.name}
                             href={item.href}
+                            target="_blank"
                             className={classNames(
                             item.current ? 'bg-gray-300 text-gray-800' : 'text-gray-700 hover:bg-gray-300 hover:text-gray-600',
-                            'rounded-md px-3 py-2 text-sm font-medium'
+                            'rounded-md px-3 py-2 text-sm font-medium sm:flex'
+                            
                             )}
                             aria-current={item.current ? 'page' : undefined}
                         >
-                            <img src={item.img} alt={item.name} className="h-4 w-4 mr-1 mb-1 inline "/>
-                            {item.name}
+                      
+                            <img src={item.img} alt={item.name} className="h-4 w-4 mr-1"/>
+                            <span class="">{item.name}</span>
+                     
                         </a>
                         ))}
                     </div>
@@ -64,7 +70,7 @@ export default function Nav() {
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end mr-10" > 
                 <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4">
-                        {contact.map((item) => (
+                        {utility.map((item) => (
                         <a
                             img={item.src}
                             key={item.name}
@@ -102,7 +108,7 @@ export default function Nav() {
               ))}
             </div>
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {contact.map((item) => (
+              {utility.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"
