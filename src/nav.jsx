@@ -76,7 +76,7 @@ export default function Nav() {
                             key={item.name}
                             href={item.href}
                             className={classNames(
-                            item.current ? 'bg-gray-900 text-white shadow-md shadow-gray-900/10' : 'hover:shadow-lg hover:shadow-gray-900/20',
+                            item.current ? 'bg-gray-900 text-white shadow-md shadow-gray-900/10' : ' shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none',
                             'rounded-md px-3 py-2 text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
