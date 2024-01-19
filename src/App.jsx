@@ -1,4 +1,6 @@
-import { useState, React } from 'react';
+import { useState, React, Fragment, useRef } from 'react';
+import { Dialog, Transition } from '@headlessui/react'
+
 
 
 import MECA from './assets/MECA-banner.png'
@@ -60,6 +62,7 @@ const CourseraData = [
 ]
 
 
+
 function App() {
   const [selectedBannerIndex, setSelectedBannerIndex] = useState(null);
 
@@ -67,14 +70,69 @@ function App() {
     setSelectedBannerIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const [open, setOpen] = useState(false)
 
+  const cancelButtonRef = useRef(null)
   
+  const handleChildCertificateImageClick = (index) => {
+    setSelectedBannerIndex(index); 
+    setOpen(true);  
+  };
 
 
   return (
     <>
 
-      
+
+    <div className="dialogImage">
+     <Transition.Root show={open} as={Fragment}>
+      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpen}>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-out duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-200"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+        </Transition.Child>
+
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+              enterTo="opacity-100 translate-y-0 sm:scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+              leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            >
+             <Dialog.Panel className="relative transform overflow-hidden shadow-xl transition-all sm:my-8 md:max-w-[700px] lg:max-w-[800px] xl:max-w-[850px]">
+                <div className="bg-white">
+                  <div className="sm:flex sm:justify-center">
+                    <img
+                      alt={GenerationData[selectedBannerIndex]?.alt} 
+                      loading="lazy"
+                      decoding="async"
+                      data-nimg="1"
+                      className="w-auto h-auto cursor-pointer shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+                      src={GenerationData[selectedBannerIndex]?.src}
+                    />
+                  </div>
+                </div>
+              </Dialog.Panel>
+            </Transition.Child>
+          </div>
+        </div>
+      </Dialog>
+    </Transition.Root>
+    </div>
+
+    
+
     <header className="bg-white p-8">
       <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2 lg:p-10">
         <div className="row-start-2 lg:row-auto">
@@ -87,7 +145,8 @@ function App() {
           </p>
           <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
             <button className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none w-full px-4 md:w-[12rem]" type="button">
-              Download resume</button>
+              Download resume
+              </button>
           </div>
         </div>
           <img
@@ -141,6 +200,7 @@ function App() {
                       data-nimg="1"
                       className="w-auto h-40 cursor-pointer shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
                       src={image.src}
+                      onClick={() => handleChildCertificateImageClick(index)}
                     />
                   </div>
                 ))
@@ -158,6 +218,7 @@ function App() {
                       data-nimg="1"
                       className="w-auto h-40 cursor-pointer shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
                       src={image.src}
+                      
                     />
                   </div>
                 ))
