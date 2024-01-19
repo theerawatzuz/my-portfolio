@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, React } from 'react';
+
+
 import MECA from './assets/MECA-banner.png'
 import COURSERA from './assets/Coursera_logo.png'
 import CODEACADEMY from './assets/Codeacademy-banner.png'
@@ -66,8 +68,13 @@ function App() {
   };
 
 
+  
+
+
   return (
     <>
+
+      
     <header className="bg-white p-8">
       <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2 lg:p-10">
         <div className="row-start-2 lg:row-auto">
@@ -317,8 +324,10 @@ function App() {
                                                                                                 </div>
                                                                                                 </div>
                                                                                                 </section>
+
+                                                                                                
       
-    </>
+</>
   );
 }
 
