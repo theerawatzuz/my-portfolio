@@ -23,43 +23,42 @@ import CourseraC5 from './assets/Coursera/Coursera XP5SJVAPFXGY-1.png'
 import CourseraC6 from './assets/Coursera/Coursera ZTR5R2GBEF5V-1.png'
 import GenerationC1 from './assets/Generation/Coursera ZTR5R2GBEF5V-1.png'
 
-const certificateData = [
-  { src: GENERATIONTHAI, alt: 'Generation thailand' },
-  { src: COURSERA, alt: 'Coursera Logo' },
-  { src: CODEACADEMY, alt: 'Codecademy Banner' },
-  { src: MECA, alt: 'MECA Banner' },
-  { src: CERTIPORT, alt: 'Certipost Seeklogo' },
- 
+const GenerationDataChild = [
+  { src: GenerationC1, alt: 'c1' }
 ];
 
-const GenerationData = [
-  {src: GenerationC1, alt: 'c1'}
-]
-
-const CertiportData = [
-  {src: CertiportC1, alt:'c1'},
-  {src: CertiportC2, alt:'c2'},
-  {src: CertiportC3, alt:'c3'},
-  {src: CertiportC4, alt:'c4'},
+const CertiportDataChild = [
+  { src: CertiportC1, alt: 'c1' },
+  { src: CertiportC2, alt: 'c2' },
+  { src: CertiportC3, alt: 'c3' },
+  { src: CertiportC4, alt: 'c4' },
 ];
 
-const MecaData = [
-  {src: MecaC1, alt: 'MECA'}
-]
+const MecaDataChild = [
+  { src: MecaC1, alt: 'MECA' }
+];
 
-const CodeacademyData = [
-  {src: CodeacamedyC1, alt: 'Codeacademy1'},
-  {src: CodeacamedyC2, alt: 'Codeacademy2'}
-]
+const MeCodeacademyDataChild = [
+  { src: CodeacamedyC1, alt: 'Codeacademy1' },
+  { src: CodeacamedyC2, alt: 'Codeacademy2' }
+];
 
-const CourseraData = [
-  {src: CourseraC1, alt: 'CourseraC1'},
-  {src: CourseraC2, alt: 'CourseraC2'},
-  {src: CourseraC3, alt: 'CourseraC3'},
-  {src: CourseraC4, alt: 'CourseraC4'},
-  {src: CourseraC5, alt: 'CourseraC5'},
-  {src: CourseraC6, alt: 'CourseraC6'},
-]
+const CourseraDataChild = [
+  { src: CourseraC1, alt: 'CourseraC1' },
+  { src: CourseraC2, alt: 'CourseraC2' },
+  { src: CourseraC3, alt: 'CourseraC3' },
+  { src: CourseraC4, alt: 'CourseraC4' },
+  { src: CourseraC5, alt: 'CourseraC5' },
+  { src: CourseraC6, alt: 'CourseraC6' },
+];
+
+const certificateDataBanner = [
+  { src: GENERATIONTHAI, alt: 'Generation thailand', childData: GenerationDataChild },
+  { src: COURSERA, alt: 'Coursera Logo', childData: CourseraDataChild },
+  { src: CODEACADEMY, alt: 'Codecademy Banner', childData: MeCodeacademyDataChild },
+  { src: MECA, alt: 'MECA Banner', childData: MecaDataChild },
+  { src: CERTIPORT, alt: 'Certipost Seeklogo', childData: CertiportDataChild },
+];
 
 
 
@@ -67,6 +66,7 @@ function App() {
   const [selectedBannerIndex, setSelectedBannerIndex] = useState(null);
 
   const handleCertificateImageClick = (index) => {
+    console.log("Selected Banner Index:", index);
     setSelectedBannerIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
@@ -74,62 +74,80 @@ function App() {
 
   const cancelButtonRef = useRef(null)
   
+  
   const handleChildCertificateImageClick = (index) => {
-    setSelectedBannerIndex(index); 
-    setOpen(true);  
+    if (
+      selectedBannerIndex !== null &&
+      selectedBannerIndex >= 0 &&
+      selectedBannerIndex < certificateDataBanner.length
+    ) {
+      const selectedChildData = certificateDataBanner[selectedBannerIndex].childData[index];
+      // Set the selected child data to use it in the dialog
+      setDialogChildData(selectedChildData);
+      setOpen(true);
+    }
   };
 
+
+  const [dialogChildData, setDialogChildData] = useState(null);
 
   return (
     <>
 
+<div className="dialogImage">
+  <Transition.Root show={open} as={Fragment}>
+    <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpen}>
+      <Transition.Child
+        as={Fragment}
+        enter="ease-out duration-300"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="ease-in duration-200"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
+        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+      </Transition.Child>
 
-    <div className="dialogImage">
-     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpen}>
-        <Transition.Child
-          as={Fragment}
-          enter="ease-out duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="ease-in duration-200"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-        </Transition.Child>
-
-        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
-            <Transition.Child
-              as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-              enterTo="opacity-100 translate-y-0 sm:scale-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-              leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            >
-             <Dialog.Panel className="relative transform overflow-hidden shadow-xl transition-all sm:my-8 md:max-w-[700px] lg:max-w-[800px] xl:max-w-[850px]">
-                <div className="bg-white">
-                  <div className="sm:flex sm:justify-center">
+      <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+        <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            enterTo="opacity-100 translate-y-0 sm:scale-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+            leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          >
+          <Dialog.Panel className="relative transform overflow-hidden shadow-xl transition-all sm:my-8 md:max-w-[700px] lg:max-w-[800px] xl:max-w-[850px]">
+            <div className="bg-white">
+              <div className="sm:flex sm:justify-center">
+                {dialogChildData && (
+                  <button className="focus:outline-none">
                     <img
-                      alt={GenerationData[selectedBannerIndex]?.alt} 
+                      alt={dialogChildData.alt}
                       loading="lazy"
                       decoding="async"
                       data-nimg="1"
                       className="w-auto h-auto cursor-pointer shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
-                      src={GenerationData[selectedBannerIndex]?.src}
+                      src={dialogChildData.src}
                     />
-                  </div>
-                </div>
-              </Dialog.Panel>
-            </Transition.Child>
-          </div>
+                  </button>
+                )}
+              </div>
+            </div>
+          </Dialog.Panel>
+
+
+          
+          </Transition.Child>
         </div>
-      </Dialog>
-    </Transition.Root>
-    </div>
+      </div>
+    </Dialog>
+  </Transition.Root>
+</div>
+
 
     
 
@@ -167,7 +185,7 @@ function App() {
           </h6>
         </div>
         <div className='flex flex-wrap items-center justify-center gap-6'>
-          {certificateData.map((image, index) => (
+          {certificateDataBanner.map((image, index) => (
             <img
               key={index}
               alt={image.alt}
@@ -184,97 +202,29 @@ function App() {
         </div>
       </section>
       {selectedBannerIndex !== null && (
-         <section className={`p-10 pt-10 pb-10 py-28 bg-gray-100 transition-transform transform ${selectedBannerIndex === 3 || selectedBannerIndex === 4 ? 'translate-y-0' : 'translate-y-2'}`}>
-          <div className="container mx-auto text-center">
-            <div className="flex flex-wrap items-center justify-center gap-6">
-             
-              {selectedBannerIndex === 0 && (
-                GenerationData.map((image, index) => (
-                  <div key={index}>
-                    <img
-                      alt={image.alt}
-                      loading="lazy"
-                      width="768"
-                      height="768"
-                      decoding="async"
-                      data-nimg="1"
-                      className="w-auto h-40 cursor-pointer shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
-                      src={image.src}
-                      onClick={() => handleChildCertificateImageClick(index)}
-                    />
-                  </div>
-                ))
-              )}
-
-              {selectedBannerIndex === 1 && (
-                CourseraData.map((image, index) => (
-                  <div key={index}>
-                    <img
-                      alt={image.alt}
-                      loading="lazy"
-                      width="768"
-                      height="768"
-                      decoding="async"
-                      data-nimg="1"
-                      className="w-auto h-40 cursor-pointer shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
-                      src={image.src}
-                      
-                    />
-                  </div>
-                ))
-              )}
-              {selectedBannerIndex === 2 && (
-                CodeacademyData.map((image, index) => (
-                  <div key={index}>
-                    <img
-                      alt={image.alt}
-                      loading="lazy"
-                      width="768"
-                      height="768"
-                      decoding="async"
-                      data-nimg="1"
-                      className="w-auto h-40 cursor-pointer shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
-                      src={image.src}
-                    />
-                  </div>
-                ))
-              )}
-              {selectedBannerIndex === 3 && (
-                MecaData.map((image, index) => (
-                  <div key={index}>
-                    <img
-                      alt={image.alt}
-                      loading="lazy"
-                      width="768"
-                      height="768"
-                      decoding="async"
-                      data-nimg="1"
-                      className="w-auto h-40 cursor-pointer shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
-                      src={image.src}
-                    />
-                  </div>
-                ))
-              )}
-               {selectedBannerIndex === 4 && (
-                CertiportData.map((image, index) => (
-                  <div key={index}>
-                    <img
-                      alt={image.alt}
-                      loading="lazy"
-                      width="768"
-                      height="768"
-                      decoding="async"
-                      data-nimg="1"
-                      className="w-auto h-40 cursor-pointer shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
-                      src={image.src}
-                    />
-                  </div>
-                ))
-              )}
+  <section className={`p-10 pt-10 pb-10 py-28 bg-gray-200 transition-transform transform ${selectedBannerIndex === 3 || selectedBannerIndex === 4 ? 'translate-y-0' : 'translate-y-2'}`}>
+    <div className="container mx-auto text-center">
+      <div className="flex flex-wrap items-center justify-center gap-6">
+        {selectedBannerIndex !== null &&
+          certificateDataBanner[selectedBannerIndex]?.childData.map((image, index) => (
+            <div key={index}>
+              <img
+                alt={image.alt}
+                loading="lazy"
+                width="768"
+                height="768"
+                decoding="async"
+                data-nimg="1"
+                className="w-auto h-40 cursor-pointer shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+                src={image.src}
+                onClick={() => handleChildCertificateImageClick(index)}
+              />
             </div>
-          </div>
-        </section>
-      )}
+          ))}
+      </div>
+    </div>
+  </section>
+)}
     <section class="px-8 py-28">
       <div class="container mx-auto mb-20 text-center">
         <p class="block antialiased font-sans text-base leading-relaxed text-blue-gray-900 mb-2 font-bold uppercase">
