@@ -16,12 +16,12 @@ import MecaC1 from './assets/Meca/CertificationMECA-1.png'
 import CodeacamedyC1 from './assets/Codeacademy/29_TheerawatBang_s profile _ Codecademy-1.png'
 import CodeacamedyC2 from './assets/Codeacademy/29_TheerawatBang_s profile _ CodecademyTS-1.png'
 import CourseraC1 from './assets/Coursera/Coursera 2TBF9QVDCN5F-1.png'
-import CourseraC2 from './assets/Coursera/Coursera A966HQAKNNMZ-1.png'
+// import CourseraC2 from './assets/Coursera/Coursera A966HQAKNNMZ-1.png'
 import CourseraC3 from './assets/Coursera/Coursera M99HJ2JE8JMQ-1.png'
 import CourseraC4 from './assets/Coursera/Coursera URWDDCN7NRSY-1.png'
 import CourseraC5 from './assets/Coursera/Coursera XP5SJVAPFXGY-1.png'
 import CourseraC6 from './assets/Coursera/Coursera ZTR5R2GBEF5V-1.png'
-import GenerationC1 from './assets/Generation/Coursera ZTR5R2GBEF5V-1.png'
+import GenerationC1 from './assets/Generation/GennarationBlur.png'
 
 const GenerationDataChild = [
   { src: GenerationC1, alt: 'c1' }
@@ -45,7 +45,7 @@ const MeCodeacademyDataChild = [
 
 const CourseraDataChild = [
   { src: CourseraC1, alt: 'CourseraC1' },
-  { src: CourseraC2, alt: 'CourseraC2' },
+  // { src: CourseraC2, alt: 'CourseraC2' },
   { src: CourseraC3, alt: 'CourseraC3' },
   { src: CourseraC4, alt: 'CourseraC4' },
   { src: CourseraC5, alt: 'CourseraC5' },
