@@ -22,6 +22,12 @@ import CourseraC4 from './assets/Coursera/Coursera URWDDCN7NRSY-1.png'
 import CourseraC5 from './assets/Coursera/Coursera XP5SJVAPFXGY-1.png'
 import CourseraC6 from './assets/Coursera/Coursera ZTR5R2GBEF5V-1.png'
 import GenerationC1 from './assets/Generation/GennarationBlur.png'
+import AMAZONWEBSERVICE from './assets/amazon-web-services-logo.png'
+import AmazonC1 from './assets/AWS/AWSBadged.png'
+
+const AmazonwebserviceDataChild = [
+  { src: AmazonC1, alt: 'c1' }
+]
 
 const GenerationDataChild = [
   { src: GenerationC1, alt: 'c1' }
@@ -53,7 +59,9 @@ const CourseraDataChild = [
 ];
 
 const certificateDataBanner = [
+  { src: AMAZONWEBSERVICE, alt: 'Amazon Web Service', childData: AmazonwebserviceDataChild },
   { src: GENERATIONTHAI, alt: 'Generation thailand', childData: GenerationDataChild },
+
   { src: COURSERA, alt: 'Coursera Logo', childData: CourseraDataChild },
   { src: CODEACADEMY, alt: 'Codecademy Banner', childData: MeCodeacademyDataChild },
   { src: MECA, alt: 'MECA Banner', childData: MecaDataChild },
@@ -159,7 +167,7 @@ function App() {
             Development Portfolio! 
           </h1>
           <p className="block antialiased font-sans text-xl font-normal leading-relaxed text-inherit mb-4 !text-gray-500 md:pr-16 xl:pr-28">
-          I'm Theerawat Silimechok, a passionate web developer based in BKK. Here, you'll get a glimpse of my journey in the world of web development, where creativity meets functionality.
+          I'm Theerawat Silimechok, a passionate web developer based in BKK & PTE. Here, you'll get a glimpse of my journey in the world of web development, where creativity meets functionality.
           </p>
           <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
             <button className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none w-full px-4 md:w-[12rem]" type="button">
