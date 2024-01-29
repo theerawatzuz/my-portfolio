@@ -10,7 +10,7 @@ const navigation = [
 ]
 
 const utility = [
-  { name: 'Darkmode', href: '#', current: true }, 
+  { name: 'Darkmode (On Progress)', href: '#', current: true }, 
 ]
 
 function classNames(...classes) {
