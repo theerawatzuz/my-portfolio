@@ -417,6 +417,134 @@ function App() {
                 
             </div>
         </section>
+        <section class="px-28 py-24">
+          <div class="container mx-auto grid w-full grid-cols-1 items-center gap-16 lg:grid-cols-2">
+               <div class="cal-span-1">
+                  <h2 class="block antialiased tracking-normal font-sans text-4xl font-semibold leading-[1.3] text-blue-gray-900">Summary</h2>
+                  <p class="block antialiased font-sans text-base leading-relaxed text-inherit mb-4 mt-3 w-9/12 font-normal !text-gray-500">
+                  Experienced Electronics and Computer Technician with 3 years of experience, including 1 year as a System Integrator,
+                  currently seeking a Programmer position. Skilled in designing user-friendly interfaces, ensuring policy compliance, and
+                  solving problems effectively. Excited to apply analytical skills, work well in teams, and use Agile methods for success in
+                  programming and software development.
+                  </p>
+                </div> 
+                <div class="col-span-1 grid gap-y-6 lg:ml-auto pr-0 lg:pr-12 xl:pr-32">
+                  <div class="flex items-start gap-4">
+                      <div class="relative flex flex-col bg-clip-border rounded-xl bg-gray-900 text-white shadow-gray-900/20 shadow-md h-12 w-12 shrink-0 items-center justify-center !rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
+                          <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/>
+                        </svg>
+                      </div>
+                      <p class="block antialiased font-sans text-base leading-relaxed text-inherit w-full font-normal !text-gray-500">
+                        Bachelor of Science in Electronics and Computer Technology
+                      </p>
+                  </div>
+                  <div class="flex items-start gap-4">
+                      <div class="relative flex flex-col bg-clip-border rounded-xl bg-gray-900 text-white shadow-gray-900/20 shadow-md h-12 w-12 shrink-0 items-center justify-center !rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-check" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                        <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"/>
+                      </svg>
+                      </div>
+                      <p class="block antialiased font-sans text-base leading-relaxed text-inherit w-full font-normal !text-gray-500">
+                        Certified Full stack Web Developer 
+                      </p>
+                  </div>
+                  <div class="flex items-start gap-4">
+                      <div class="relative flex flex-col bg-clip-border rounded-xl bg-gray-900 text-white shadow-gray-900/20 shadow-md h-12 w-12 shrink-0 items-center justify-center !rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mouse2" viewBox="0 0 16 16">
+                        <path d="M3 5.188C3 2.341 5.22 0 8 0s5 2.342 5 5.188v5.625C13 13.658 10.78 16 8 16s-5-2.342-5-5.188V5.189zm4.5-4.155C5.541 1.289 4 3.035 4 5.188V5.5h3.5zm1 0V5.5H12v-.313c0-2.152-1.541-3.898-3.5-4.154M12 6.5H4v4.313C4 13.145 5.81 15 8 15s4-1.855 4-4.188z"/>
+                      </svg>
+                      </div>
+                      <p class="block antialiased font-sans text-base leading-relaxed text-inherit w-full font-normal !text-gray-500">
+                       Frontend Framework Proficiency Certification
+                      </p>
+                  </div>
+                </div>
+          </div>
+        </section>
+        <section class="px-24 py-16"> 
+            <div class="container mx-auto mb-20 text-center">
+              <h1 class="block antialiased tracking-normal font-sans text-5xl font-semibold leading-tight text-blue-gray-900 mb-4">
+                Contact Me
+              </h1>
+              <p class="block antialiased font-sans text-xl font-normal leading-relaxed text-inherit mx-auto w-full lg:w-5/12 !text-gray-500">
+              I'm prepared to apply my current skills and enhance them in the future to showcase the beauty of websites design.
+              </p>
+            </div> 
+            <div>
+      
+                  <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md container mx-auto border border-gray/50">
+                    <div class="p-6 grid grid-cols-1 lg:grid-cols-7 md:gap-10">
+                      <div class="w-full col-span-3 rounded-lg h-full py-8 p-5 md:p-16 bg-gray-900">
+                        <h4 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-white mb-2">
+                          Contact Information
+                        </h4>
+                        <p class="block antialiased font-sans font-normal text-inherit mx-auto mb-8 text-base !text-gray-500">
+              
+                          </p>
+                          <div class="flex gap-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-6 w-6 text-white">
+                              <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd">
+                              </path>
+                              </svg>
+                          <h6 class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white mb-2 ml-2">
+                            (+66) 62 440 8169
+                          </h6>
+                          </div>
+                          <div class="flex my-2 gap-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-6 w-6 text-white">
+                              <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z">
+                                </path>
+                                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z">
+                                  </path>
+                                  </svg>
+                                  <h6 class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white mb-2 ml-2">
+                                    bankt21@gmail.com
+                              </h6>
+                            </div>
+                          <div class="flex mb-10 gap-5">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-8 w-8 text-white">
+                        <path d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0M5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.15.15 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157m.791-2.924a.156.156 0 0 0-.156.156v3.486c0 .086.07.155.156.155h.562c.086 0 .155-.07.155-.155V4.918a.156.156 0 0 0-.155-.156zm3.863 0a.156.156 0 0 0-.156.156v2.07L7.923 4.832l-.013-.015v-.001l-.01-.01-.003-.003-.011-.009h-.001L7.88 4.79l-.003-.002-.005-.003-.008-.005h-.002l-.003-.002-.01-.004-.004-.002-.01-.003h-.002l-.003-.001-.009-.002h-.006l-.003-.001h-.004l-.002-.001h-.574a.156.156 0 0 0-.156.155v3.486c0 .086.07.155.156.155h.56c.087 0 .157-.07.157-.155v-2.07l1.6 2.16a.2.2 0 0 0 .039.038l.001.001.01.006.004.002.008.004.007.003.005.002.01.003h.003a.2.2 0 0 0 .04.006h.56c.087 0 .157-.07.157-.155V4.918a.156.156 0 0 0-.156-.156zm3.815.717v-.56a.156.156 0 0 0-.155-.157h-2.242a.16.16 0 0 0-.108.044h-.001l-.001.002-.002.003a.16.16 0 0 0-.044.107v3.486c0 .041.017.08.044.107l.002.003.002.002a.16.16 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156Z"/>
+                      </svg>
+                      <h6 class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white mb-2">
+                      theerawat911
+                      </h6>
+                      </div>
+                      <div class="flex items-center gap-5">
+                        <button class="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-white hover:bg-white/10 active:bg-white/30" type="button">
+                          <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                            <i class="fa-brands fa-facebook text-lg">
+                            </i>
+                            </span>
+                          </button>
+                          <button class="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-white hover:bg-white/10 active:bg-white/30" type="button">
+                            <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                              <i class="fa-brands fa-instagram text-lg">
+                                </i>
+                                </span>
+                                </button>
+                            <button class="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-white hover:bg-white/10 active:bg-white/30" type="button">
+                          <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                            <i class="fa-brands fa-github text-lg">
+                              </i>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>  
+        </section>
+        <footer class="mt-10 px-8 pt-20">
+          <div class="container mx-auto">
+            <div class="mt-16 flex flex-wrap items-center justify-center gap-y-4 border-t border-gray-200 py-6 md:justify-between">
+              <p class="block antialiased font-sans text-base leading-relaxed text-inherit text-center font-normal !text-gray-700">
+                © 2024 Made with <a href="https://www.material-tailwind.com" target="_blank">Material Tailwind</a> by TheerawatSMC.</p>
+            </div>
+          </div>
+
+        </footer>
 
                                                                                                 
 
