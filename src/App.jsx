@@ -31,6 +31,8 @@ import SportAppPic from './assets/WebPreview/SportApp.png'
 
 import ResumeFile from './assets/Profile/Theerawat Silimechok(Programmerandport).pdf'
 
+import InProgess from './assets/Progess.png'
+
 const AmazonwebserviceDataChild = [
   { src: AmazonC1, alt: 'c1' }
 ]
@@ -356,7 +358,7 @@ function App() {
 
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none">
                 <div class="relative bg-clip-border rounded-xl overflow-hidden bg-white text-gray-700 shadow-lg mx-0 mt-0 mb-6 h-48">
-                  <img alt="Mobile App Development" loading="lazy" width="768" height="768" decoding="async" data-nimg="1" class="h-full w-full object-cover" src="/src/assets/project-mock.jpg" />
+                  <img alt="Air conditioning technician queue management website" loading="lazy" width="768" height="768" decoding="async" data-nimg="1" class="h-full w-full object-cover" src={InProgess} />
                 </div>
                 <div class="p-0">
                   <a href="#" class="text-blue-gray-900 transition-colors hover:text-gray-800">
@@ -378,7 +380,7 @@ function App() {
                 </div>
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none">
                 <div class="relative bg-clip-border rounded-xl overflow-hidden bg-white text-gray-700 shadow-lg mx-0 mt-0 mb-6 h-48">
-                  <img alt="Mobile App Development" loading="lazy" width="768" height="768" decoding="async" data-nimg="1" class="h-full w-full object-cover" src="/src/assets/project-mock.jpg" />
+                  <img alt="Motorcycle rental management website" loading="lazy" width="768" height="768" decoding="async" data-nimg="1" class="h-full w-full object-cover" src={InProgess} />
                 </div>
                 <div class="p-0">
                   <a href="#" class="text-blue-gray-900 transition-colors hover:text-gray-800">
@@ -398,7 +400,7 @@ function App() {
 
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none">
                 <div class="relative bg-clip-border rounded-xl overflow-hidden bg-white text-gray-700 shadow-lg mx-0 mt-0 mb-6 h-48">
-                  <img alt="Mobile App Development" loading="lazy" width="768" height="768" decoding="async" data-nimg="1" class="h-full w-full object-cover" src="/src/assets/project-mock.jpg" />
+                  <img alt="Resort management website" loading="lazy" width="768" height="768" decoding="async" data-nimg="1" class="h-full w-full object-cover" src={InProgess} />
                 </div>
                 <div class="p-0">
                   <a href="#" class="text-blue-gray-900 transition-colors hover:text-gray-800">
