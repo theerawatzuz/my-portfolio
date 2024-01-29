@@ -27,6 +27,10 @@ import AmazonC1 from './assets/AWS/AWSBadged.png'
 
 import ProfilePic from './assets/Profile/ProfilePic.jpg'
 
+import SportAppPic from './assets/WebPreview/SportApp.png'
+
+import ResumeFile from './assets/Profile/Theerawat Silimechok(Programmerandport).pdf'
+
 const AmazonwebserviceDataChild = [
   { src: AmazonC1, alt: 'c1' }
 ]
@@ -101,6 +105,20 @@ function App() {
 
   const [dialogChildData, setDialogChildData] = useState(null);
 
+
+
+  const handleDownload = () => {
+    const filePath = ResumeFile;
+    const link = document.createElement('a');
+    link.href = filePath;
+    link.download = 'Theerawat_Silimechok_Programmer_and_Portfolio.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  
+
+
   return (
     <>
 
@@ -172,9 +190,13 @@ function App() {
           I'm Theerawat Silimechok, a passionate web developer based in BKK & PTE. Here, you'll get a glimpse of my journey in the world of web development, where creativity meets functionality.
           </p>
           <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
-            <button className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none w-full px-4 md:w-[12rem]" type="button">
+          <button
+              className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none w-full px-4 md:w-[12rem]"
+              type="button"
+              onClick={handleDownload}
+            >
               Download resume
-              </button>
+            </button>
           </div>
         </div>
           <img
@@ -314,20 +336,44 @@ function App() {
             <div class="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-4">
               <div class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none">
                 <div class="relative bg-clip-border rounded-xl overflow-hidden bg-white text-gray-700 shadow-lg mx-0 mt-0 mb-6 h-48">
-                  <img alt="Mobile App Development" loading="lazy" width="768" height="768" decoding="async" data-nimg="1" class="h-full w-full object-cover" src="/src/assets/project-mock.jpg" />
+                  <img alt="Mobile App Development" loading="lazy" width="768" height="768" decoding="async" data-nimg="1" class="h-full w-full object-cover" src={SportAppPic} />
                 </div>
                 <div class="p-0">
-                  <a href="#" class="text-blue-gray-900 transition-colors hover:text-gray-800">
+                  <a href="https://chiba-matcha-front-end.vercel.app/" target="_blank" class="text-blue-gray-900 transition-colors hover:text-gray-800">
                     <h5 class="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-inherit mb-2">
                       Sports Social & booking website
                     </h5>
                   </a>
                   <p class="block antialiased font-sans text-base leading-relaxed text-inherit mb-6 font-normal !text-gray-500">
-                    Mobile app designed to help users discover and explore local restaurants and cuisines.
+                  Creating responsive websites all platforms with React & MUI. Utilizing serverless back-end architecture by MongoDB.
                   </p>
-                  <button class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
+                  {/* <button class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
                     see details
-                  </button>
+                  </button> */}
+                  </div>
+                </div>
+
+
+                <div class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none">
+                <div class="relative bg-clip-border rounded-xl overflow-hidden bg-white text-gray-700 shadow-lg mx-0 mt-0 mb-6 h-48">
+                  <img alt="Mobile App Development" loading="lazy" width="768" height="768" decoding="async" data-nimg="1" class="h-full w-full object-cover" src="/src/assets/project-mock.jpg" />
+                </div>
+                <div class="p-0">
+                  <a href="#" class="text-blue-gray-900 transition-colors hover:text-gray-800">
+                    <h5 class="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-inherit mb-2">
+                    Air conditioning technician queue management website
+                    </h5>
+                  </a>
+                  <p class="block antialiased font-sans text-base leading-relaxed text-inherit mb-6 font-normal !text-gray-500">
+                    Planing.
+                  </p>
+                  {/* <button
+                    class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+                    type="button"
+                  >
+                    see details
+                  </button> */}
+
                   </div>
                 </div>
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none">
@@ -337,17 +383,19 @@ function App() {
                 <div class="p-0">
                   <a href="#" class="text-blue-gray-900 transition-colors hover:text-gray-800">
                     <h5 class="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-inherit mb-2">
-                      Mobile App Development
+                    Motorcycle rental management website
                     </h5>
                   </a>
                   <p class="block antialiased font-sans text-base leading-relaxed text-inherit mb-6 font-normal !text-gray-500">
-                    Mobile app designed to help users discover and explore local restaurants and cuisines.
+                    Planing.
                   </p>
-                  <button class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
+                  {/* <button class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
                     see details
-                  </button>
+                  </button> */}
                   </div>
                 </div>
+
+
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none">
                 <div class="relative bg-clip-border rounded-xl overflow-hidden bg-white text-gray-700 shadow-lg mx-0 mt-0 mb-6 h-48">
                   <img alt="Mobile App Development" loading="lazy" width="768" height="768" decoding="async" data-nimg="1" class="h-full w-full object-cover" src="/src/assets/project-mock.jpg" />
@@ -355,33 +403,15 @@ function App() {
                 <div class="p-0">
                   <a href="#" class="text-blue-gray-900 transition-colors hover:text-gray-800">
                     <h5 class="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-inherit mb-2">
-                      Mobile App Development
+                    Resort management website
                     </h5>
                   </a>
                   <p class="block antialiased font-sans text-base leading-relaxed text-inherit mb-6 font-normal !text-gray-500">
-                    Mobile app designed to help users discover and explore local restaurants and cuisines.
+                      Planing.
                   </p>
-                  <button class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
+                  {/* <button class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
                     see details
-                  </button>
-                  </div>
-                </div>
-                <div class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none">
-                <div class="relative bg-clip-border rounded-xl overflow-hidden bg-white text-gray-700 shadow-lg mx-0 mt-0 mb-6 h-48">
-                  <img alt="Mobile App Development" loading="lazy" width="768" height="768" decoding="async" data-nimg="1" class="h-full w-full object-cover" src="/src/assets/project-mock.jpg" />
-                </div>
-                <div class="p-0">
-                  <a href="#" class="text-blue-gray-900 transition-colors hover:text-gray-800">
-                    <h5 class="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-inherit mb-2">
-                      Mobile App Development
-                    </h5>
-                  </a>
-                  <p class="block antialiased font-sans text-base leading-relaxed text-inherit mb-6 font-normal !text-gray-500">
-                    Mobile app designed to help users discover and explore local restaurants and cuisines.
-                  </p>
-                  <button class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
-                    see details
-                  </button>
+                  </button> */}
                   </div>
                 </div>
                 
