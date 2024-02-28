@@ -21,7 +21,7 @@ import CourseraC3 from './assets/Coursera/Coursera M99HJ2JE8JMQ-1.png'
 import CourseraC4 from './assets/Coursera/Coursera URWDDCN7NRSY-1.png'
 import CourseraC5 from './assets/Coursera/Coursera XP5SJVAPFXGY-1.png'
 import CourseraC6 from './assets/Coursera/Coursera ZTR5R2GBEF5V-1.png'
-import GenerationC1 from './assets/Generation/GennarationBlur.png'
+import GenerationC1 from './assets/Generation/29_Theerawat Silimechok-1.png'
 import AMAZONWEBSERVICE from './assets/amazon-web-services-logo.png'
 import AmazonC1 from './assets/AWS/AWSBadged.png'
 
